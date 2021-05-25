@@ -6,7 +6,17 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+  var nuevoObjeto = {
+    nombre: nombre,
+    edad: edad,
+    meow: function () {
+      return 'Meow!';
+    }
+  }
+  return nuevoObjeto;
 }
+
+// console.log(crearGato('Bruno', 2));
 
 
 function agregarPropiedad(objeto, property) {
@@ -14,7 +24,11 @@ function agregarPropiedad(objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  objeto[property] = null;
+  return objeto;
 }
+// nombres={};
+// console.log(agregarPropiedad(nombres, 'nombre1'));
 
 function invocarMetodo(objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
